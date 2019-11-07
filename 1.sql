@@ -1,0 +1,9 @@
+CREATE FUNCTION GetValue1Sum()
+RETURNS NVARCHAR(MAX)
+AS
+BEGIN
+	DECLARE @Result AS NVARCHAR(MAX) = ''
+	SELECT @Result = @Result + [Value1] FROM [Table1]
+	RETURN @Result
+END
+GO
